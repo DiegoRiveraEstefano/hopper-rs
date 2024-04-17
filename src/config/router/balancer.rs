@@ -23,6 +23,6 @@ pub struct Balanced {
 
 impl Balanced {
     pub(super) fn get(&self, n: usize) -> SocketAddr {
-        self.servers[n & self.servers.len()].into()
+        self.servers[n & self.servers.len() - 1].into()
     }
 }
